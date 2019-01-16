@@ -8,6 +8,7 @@ using TodoApi.Models;
 
 namespace TodoApi.Controllers
 {
+    [Produces("application/json")]
     [Route("api/todo")]
     [ApiController]
     public class TodoController : ControllerBase
@@ -48,7 +49,25 @@ namespace TodoApi.Controllers
         }
 
         // POST: api/Todo
+        /// <summary>
+        /// Kreiranje Todo objekata.
+        /// </summary>
+        /// <remarks>
+        /// Jednostavan zahtjev:
+        ///     POST /Todo
+        ///     {
+        ///       "id": 1,
+        ///       "name": "Item1",
+        ///       "isComplete": true
+        ///     }
+        /// </remarks>
+        /// <param name="todoItem"></param> //obrati paznju naziv parametra se mora poklapati sa imenom paramtra u PostTodoItem metodi ispod
+        /// <returns>Novokreirani Todo objekat.</returns>
+        /// <response code="201">Vrace se novokreirani objekat.</response>
+        /// <response code="400">Ako je objekat null.</response>
         [HttpPost]
+        [ProducesResponseType(201)]
+        [ProducesResponseType(400)]
         public async Task<ActionResult<TodoItem>> PostTodoItem(TodoItem todoItem)
         {
             _context.TodoItems.Add(todoItem);
@@ -72,7 +91,10 @@ namespace TodoApi.Controllers
             return NoContent();
         }
 
-        // DELETE: api/Todo/5
+        /// <summary>
+        /// Brisanje odredjnih Todo stvari.
+        /// </summary>
+        /// <param name="id"></param>
         [HttpDelete("{id}")]
         public async Task<ActionResult<TodoItem>> DeleteTodoItem(long id)
         {

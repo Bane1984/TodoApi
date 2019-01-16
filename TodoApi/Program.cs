@@ -12,13 +12,14 @@ namespace TodoApi
 {
     public class Program
     {
-        public static void Main(string[] args)
-        {
-            CreateWebHostBuilder(args).Build().Run();
-        }
+        #pragma warning disable CS1591
+        public static void Main(string[] args) =>
+            BuildWebHost(args).Run();
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+        public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+                .UseStartup<Startup>()
+                .Build();
     }
+    #pragma warning restore CS1591
 }

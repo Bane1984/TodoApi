@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TodoApi</name>
+    </assembly>
+    <members>
+        <member name="M:TodoApi.Controllers.TodoController.PostTodoItem(TodoApi.Models.TodoItem)">
+            <summary>
+            Kreiranje Todo objekata.
+            </summary>
+            <remarks>
+            Jednostavan zahtjev:
+                POST /Todo
+                {
+                  "id": 1,
+                  "name": "Item1",
+                  "isComplete": true
+                }
+            </remarks>
+            <param name="todoItem"></param> //obrati paznju naziv parametra se mora poklapati sa imenom paramtra u PostTodoItem metodi ispod
+            <returns>Novokreirani Todo objekat.</returns>
+            <response code="201">Vrace se novokreirani objekat.</response>
+            <response code="400">Ako je objekat null.</response>
+        </member>
+        <member name="M:TodoApi.Controllers.TodoController.DeleteTodoItem(System.Int64)">
+            <summary>
+            Brisanje odredjnih Todo stvari.
+            </summary>
+            <param name="id"></param>
+        </member>
+    </members>
+</doc>
