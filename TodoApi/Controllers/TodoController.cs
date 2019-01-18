@@ -61,19 +61,19 @@ namespace TodoApi.Controllers
         ///       "isComplete": true
         ///     }
         /// </remarks>
-        /// <param name="todoItem"></param> //obrati paznju naziv parametra se mora poklapati sa imenom paramtra u PostTodoItem metodi ispod
+        /// <param name="item"></param> //obrati paznju naziv parametra se mora poklapati sa imenom paramtra u PostTodoItem metodi ispod
         /// <returns>Novokreirani Todo objekat.</returns>
         /// <response code="201">Vrace se novokreirani objekat.</response>
         /// <response code="400">Ako je objekat null.</response>
         [HttpPost]
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]
-        public async Task<ActionResult<TodoItem>> PostTodoItem(TodoItem todoItem)
+        public ActionResult<TodoItem> Create(TodoItem item)
         {
-            _context.TodoItems.Add(todoItem);
-            await _context.SaveChangesAsync();
+            _context.TodoItems.Add(item);
+            _context.SaveChanges();
 
-            return CreatedAtAction("GetTodoItem", new { id = todoItem.Id }, todoItem);
+            return CreatedAtRoute("GetTodo", new { id = item.Id }, item);
         }
 
         // PUT: api/Todo/5
@@ -96,18 +96,19 @@ namespace TodoApi.Controllers
         /// </summary>
         /// <param name="id"></param>
         [HttpDelete("{id}")]
-        public async Task<ActionResult<TodoItem>> DeleteTodoItem(long id)
+        public IActionResult Delete(long id)
         {
-            var todoItem = await _context.TodoItems.FindAsync(id);
-            if (todoItem == null)
+            var todo = _context.TodoItems.Find(id);
+
+            if (todo == null)
             {
                 return NotFound();
             }
 
-            _context.TodoItems.Remove(todoItem);
-            await _context.SaveChangesAsync();
+            _context.TodoItems.Remove(todo);
+            _context.SaveChanges();
 
-            return todoItem;
+            return NoContent();
         }
 
 

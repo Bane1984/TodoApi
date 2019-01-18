@@ -10,9 +10,9 @@ using Microsoft.Extensions.Logging;
 
 namespace TodoApi
 {
+    #pragma warning disable CS1591
     public class Program
     {
-        #pragma warning disable CS1591
         public static void Main(string[] args) =>
             BuildWebHost(args).Run();
 

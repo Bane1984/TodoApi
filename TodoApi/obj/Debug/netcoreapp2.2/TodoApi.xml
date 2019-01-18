@@ -4,7 +4,7 @@
         <name>TodoApi</name>
     </assembly>
     <members>
-        <member name="M:TodoApi.Controllers.TodoController.PostTodoItem(TodoApi.Models.TodoItem)">
+        <member name="M:TodoApi.Controllers.TodoController.Create(TodoApi.Models.TodoItem)">
             <summary>
             Kreiranje Todo objekata.
             </summary>
@@ -17,12 +17,12 @@
                   "isComplete": true
                 }
             </remarks>
-            <param name="todoItem"></param> //obrati paznju naziv parametra se mora poklapati sa imenom paramtra u PostTodoItem metodi ispod
+            <param name="item"></param> //obrati paznju naziv parametra se mora poklapati sa imenom paramtra u PostTodoItem metodi ispod
             <returns>Novokreirani Todo objekat.</returns>
             <response code="201">Vrace se novokreirani objekat.</response>
             <response code="400">Ako je objekat null.</response>
         </member>
-        <member name="M:TodoApi.Controllers.TodoController.DeleteTodoItem(System.Int64)">
+        <member name="M:TodoApi.Controllers.TodoController.Delete(System.Int64)">
             <summary>
             Brisanje odredjnih Todo stvari.
             </summary>
