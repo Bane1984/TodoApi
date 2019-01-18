@@ -36,7 +36,7 @@ namespace TodoApi.Controllers
 
         // GET: api/product/{id}
         [HttpGet("{id}")]
-        public async Task<ActionResult<ProductItem>> GetProductItems(long id)
+        public async Task<ActionResult<ProductItem>> GetProductItems(int id)
         {
             var prodItem = await _product.ProductItems.FindAsync(id);
 
