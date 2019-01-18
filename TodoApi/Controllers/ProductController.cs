@@ -26,12 +26,27 @@ namespace TodoApi.Controllers
             }
 
         }
-        // GET: api/product
-        [Route(("products"))]
+        // GET: api/product/products
+        //[Route(("products"))] radi
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ProductItem>>> GetProductItems()
         {
             return await _product.ProductItems.ToListAsync();
         }
+
+        // GET: api/product/{id}
+        [HttpGet("{id}")]
+        public async Task<ActionResult<ProductItem>> GetProductItems(long id)
+        {
+            var prodItem = await _product.ProductItems.FindAsync(id);
+
+            if (prodItem == null)
+            {
+                return NotFound();
+            }
+
+            return prodItem;
+        }
+
     }
 }

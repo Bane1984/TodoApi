@@ -33,10 +33,14 @@ namespace TodoApi.Controllers
         {
             return await _context.TodoItems.ToListAsync();
         }
-
+        /// <summary>
+        /// Uzimanje Todo objekata sa odredjenim Id-em ukoliko postoji pod tim Id-em, ukoliko ne NotFound slijedi.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         // GET: api/Todo/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<TodoItem>> GetTodoItem(long id)
+        public async Task<ActionResult<TodoItem>> GetTodoItems(long id)
         {
             var todoItem = await _context.TodoItems.FindAsync(id);
 
@@ -76,6 +80,12 @@ namespace TodoApi.Controllers
             return CreatedAtRoute("GetTodo", new { id = item.Id }, item);
         }
 
+        /// <summary>
+        /// Update objekata ukoliko je id dobar ukoliko ne BadRequest.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="todoItem"></param>
+        /// <returns></returns>
         // PUT: api/Todo/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTodoItem(long id, TodoItem todoItem)
@@ -110,7 +120,6 @@ namespace TodoApi.Controllers
 
             return NoContent();
         }
-
 
     }
 }

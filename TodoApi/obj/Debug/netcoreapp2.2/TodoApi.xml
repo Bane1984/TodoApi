@@ -4,6 +4,13 @@
         <name>TodoApi</name>
     </assembly>
     <members>
+        <member name="M:TodoApi.Controllers.TodoController.GetTodoItems(System.Int64)">
+            <summary>
+            Uzimanje Todo objekata sa odredjenim Id-em ukoliko postoji pod tim Id-em, ukoliko ne NotFound slijedi.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="M:TodoApi.Controllers.TodoController.Create(TodoApi.Models.TodoItem)">
             <summary>
             Kreiranje Todo objekata.
@@ -21,6 +28,14 @@
             <returns>Novokreirani Todo objekat.</returns>
             <response code="201">Vrace se novokreirani objekat.</response>
             <response code="400">Ako je objekat null.</response>
+        </member>
+        <member name="M:TodoApi.Controllers.TodoController.PutTodoItem(System.Int64,TodoApi.Models.TodoItem)">
+            <summary>
+            Update objekata ukoliko je id dobar ukoliko ne BadRequest.
+            </summary>
+            <param name="id"></param>
+            <param name="todoItem"></param>
+            <returns></returns>
         </member>
         <member name="M:TodoApi.Controllers.TodoController.Delete(System.Int64)">
             <summary>
