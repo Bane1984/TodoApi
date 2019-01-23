@@ -1,0 +1,7 @@
+C:\Users\Bild33\source\repos\OsnoveCsharpa\OsnoveCsharpa\obj\Debug\OsnoveCsharpa.csprojAssemblyReference.cache
+C:\Users\Bild33\source\repos\OsnoveCsharpa\OsnoveCsharpa\obj\Debug\OsnoveCsharpa.csproj.CoreCompileInputs.cache
+C:\Users\Bild33\source\repos\OsnoveCsharpa\OsnoveCsharpa\bin\Debug\OsnoveCsharpa.exe.config
+C:\Users\Bild33\source\repos\OsnoveCsharpa\OsnoveCsharpa\bin\Debug\OsnoveCsharpa.exe
+C:\Users\Bild33\source\repos\OsnoveCsharpa\OsnoveCsharpa\bin\Debug\OsnoveCsharpa.pdb
+C:\Users\Bild33\source\repos\OsnoveCsharpa\OsnoveCsharpa\obj\Debug\OsnoveCsharpa.exe
+C:\Users\Bild33\source\repos\OsnoveCsharpa\OsnoveCsharpa\obj\Debug\OsnoveCsharpa.pdb
