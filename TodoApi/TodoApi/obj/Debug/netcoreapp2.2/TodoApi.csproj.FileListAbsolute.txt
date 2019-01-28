@@ -1,0 +1,16 @@
+C:\Users\Bild33\source\repos\TodoApi\TodoApi\bin\Debug\netcoreapp2.2\TodoApi.deps.json
+C:\Users\Bild33\source\repos\TodoApi\TodoApi\bin\Debug\netcoreapp2.2\TodoApi.runtimeconfig.json
+C:\Users\Bild33\source\repos\TodoApi\TodoApi\bin\Debug\netcoreapp2.2\TodoApi.runtimeconfig.dev.json
+C:\Users\Bild33\source\repos\TodoApi\TodoApi\bin\Debug\netcoreapp2.2\TodoApi.dll
+C:\Users\Bild33\source\repos\TodoApi\TodoApi\bin\Debug\netcoreapp2.2\TodoApi.pdb
+C:\Users\Bild33\source\repos\TodoApi\TodoApi\obj\Debug\netcoreapp2.2\TodoApi.csprojAssemblyReference.cache
+C:\Users\Bild33\source\repos\TodoApi\TodoApi\obj\Debug\netcoreapp2.2\TodoApi.csproj.CoreCompileInputs.cache
+C:\Users\Bild33\source\repos\TodoApi\TodoApi\obj\Debug\netcoreapp2.2\TodoApi.RazorAssemblyInfo.cache
+C:\Users\Bild33\source\repos\TodoApi\TodoApi\obj\Debug\netcoreapp2.2\TodoApi.RazorAssemblyInfo.cs
+C:\Users\Bild33\source\repos\TodoApi\TodoApi\obj\Debug\netcoreapp2.2\TodoApi.AssemblyInfoInputs.cache
+C:\Users\Bild33\source\repos\TodoApi\TodoApi\obj\Debug\netcoreapp2.2\TodoApi.AssemblyInfo.cs
+C:\Users\Bild33\source\repos\TodoApi\TodoApi\obj\Debug\netcoreapp2.2\TodoApi.RazorTargetAssemblyInfo.cache
+C:\Users\Bild33\source\repos\TodoApi\TodoApi\obj\Debug\netcoreapp2.2\TodoApi.dll
+C:\Users\Bild33\source\repos\TodoApi\TodoApi\obj\Debug\netcoreapp2.2\TodoApi.pdb
+C:\Users\Bild33\source\repos\TodoApi\TodoApi\bin\Debug\netcoreapp2.2\TodoApi.xml
+C:\Users\Bild33\source\repos\TodoApi\TodoApi\obj\Debug\netcoreapp2.2\TodoApi.xml
